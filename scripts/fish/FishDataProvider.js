@@ -6,7 +6,7 @@
  */
 const fishCollection = [
     {
-        name: "Betty",
+        name: "betty",
         image: "https://i.ytimg.com/vi/z_XlTRYLZ1Q/maxresdefault.jpg",
         species: "Longtooth Barracuda",
         location: "Cumberland River",
