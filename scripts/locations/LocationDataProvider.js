@@ -17,6 +17,6 @@ const  locationCollection = [
     }
 ]
 
-export const locationTips = () => {
+export const locationInfo = () => {
     return locationCollection.slice()
 }
