@@ -1,5 +1,5 @@
 import { locationInfo } from "./LocationDataProvider.js";
-import locations from "./Locations.js";
+import locations from "./Location.js";
 
 const contentTarget = document.querySelector(".locations")
 
