@@ -10,7 +10,7 @@ const fishCollection = [
         image: "https://i.ytimg.com/vi/z_XlTRYLZ1Q/maxresdefault.jpg",
         species: "Longtooth Barracuda",
         location: "Cumberland River",
-        length: "2 ft",
+        length: 10,
         food: ["Squid"]
     },
     {
@@ -18,11 +18,11 @@ const fishCollection = [
         species: "Orange Clownfish",
         image: "https://3.imimg.com/data3/IW/XT/GLADMIN-105863/fish-125x125.jpg",
         location: "Caribbean",
-        length: "3 in",
+        length: 3,
         food: ["Algae", "Crustaceans"]
     },
     {
-        length: "2 in",
+        length: 9,
         species: "Clownfish",
         food: ["Plankton"],
         location: "Great Barrier Reef",
@@ -34,11 +34,50 @@ const fishCollection = [
         name: "Dory",
         species: "Blue Tang",
         location: "New Zealand Sea",
-        length: "4 in",
+        length: 11,
         food: ["Clownfish"]
     }
 ]
 
 export const useFish = () => {
     return fishCollection.slice()
+}
+
+export const mostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFish = []
+
+    for (const fish of fishCollection) {
+        if (fish.length % 3 === 0) {
+            holyFish.push(fish)
+        }
+    }
+
+    return holyFish
+}
+
+export const soldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish
+    const soldiers = []
+
+    for (const fish of fishCollection) {
+        if (fish.length % 5 === 0) {
+            soldiers.push(fish)
+        }
+    }
+
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+    // Any fish not a multiple of 3 or 5
+    const regularFish = []
+
+    for (const fish of fishCollection) {
+        if (fish.length % 5 !== 0 && fish.length % 3 !== 0) {
+            regularFish.push(fish)
+        }
+    }
+
+    return regularFish
 }
